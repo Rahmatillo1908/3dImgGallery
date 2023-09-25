@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1" ><img src="https://avatars.mds.yandex.net/i?id=aec4ec000e0b92e2a7c651bc13c79adba54c30ed-8187788-images-thumbs&n=13" alt=""></span>
+            <span style="--i:2" ><img src="https://avatars.mds.yandex.net/i?id=6a91e95e1cfb7b59243a2da4b871eb6137a37fda-9860796-images-thumbs&n=13" alt=""></span>
+            <span style="--i:3" ><img src="https://avatars.mds.yandex.net/i?id=3fce0994e7e1a1e5309ac1b8a4f6e82b13da2052-9842828-images-thumbs&n=13" alt=""></span>
+            <span style="--i:4" ><img src="https://avatars.mds.yandex.net/i?id=ce2e1aec05ce038f18174a459899a4871fcbd134-9880043-images-thumbs&n=13" alt=""></span>
+            <span style="--i:5" ><img src="https://avatars.mds.yandex.net/i?id=4c124d106185f3d3ff7afcb44c81aebd34bac358-8751582-images-thumbs&n=13" alt=""></span>
+            <span style="--i:6" ><img src="https://avatars.mds.yandex.net/i?id=1ddbb430e36e5af6a3ef3a1d49e349e70aefcc93-8272935-images-thumbs&n=13" alt=""></span>
+            <span style="--i:7" ><img src="https://avatars.mds.yandex.net/i?id=2a00000179fc5e11b1d030b94f5a1dfb18bc-4055786-images-thumbs&n=13" alt=""></span>
+            <span style="--i:8" ><img src="https://avatars.mds.yandex.net/i?id=e33c3e18d86fe8cfaf3d1bcaf9491c03895250ee-9857422-images-thumbs&n=13" alt=""></span>
+        </div>
+        <div class="btns">
+            <div class="btn prev"></div>
+            <div class="btn next"></div>
+        </div>
+    </div>
+    <script>
+        let prev = document.querySelector(".prev");
+        let next = document.querySelector(".next");
+        let box = document.querySelector(".box");
+
+        let degress = 0 
+        prev.addEventListener("click" , function(){
+            degress += 45
+            box.style=`transform: perspective(1000px) rotateY(${degress}deg);`
+        })
+        next.addEventListener("click" , function(){
+            degress -= 45
+            box.style=`transform: perspective(1000px) rotateY(${degress}deg);`
+        })
+    </script>
+</body>
+</html>
